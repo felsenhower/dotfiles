@@ -32,7 +32,9 @@
     ~/.bash_login: public/bash/bash_login
     ~/.config/fontconfig: public/fontconfig
     ~/.config/nvim: public/neovim
-    ~/.oh-my-zsh: public/ohmyzsh
+    ~/.oh-my-zsh:
+        path: public/ohmyzsh
+        force: true
     ~/.config/redshift.conf:
         path: public/redshift/redshift.conf
         if: 'which redshift'
