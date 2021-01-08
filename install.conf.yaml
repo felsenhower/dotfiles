@@ -32,6 +32,7 @@
     ~/.bash_login: public/bash/bash_login
     ~/.config/fontconfig: public/fontconfig
     ~/.config/nvim: public/neovim
+    ~/.oh-my-zsh: public/ohmyzsh
     ~/.config/redshift.conf:
         path: public/redshift/redshift.conf
         if: 'which redshift'
