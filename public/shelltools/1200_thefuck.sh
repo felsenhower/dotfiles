@@ -1,2 +1,2 @@
 # For plugin thefuck https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/thefuck
-eval $(thefuck --alias) 
+which thefuck > /dev/null && eval $(thefuck --alias) 

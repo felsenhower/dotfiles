@@ -1,1 +1,1 @@
-eval "$(gh completion -s zsh)" 
+which gh > /dev/null && eval "$(gh completion -s zsh)" 
