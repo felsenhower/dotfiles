@@ -2,6 +2,16 @@
     link:
         create: true
 
+- shell:
+    -
+        command: git submodule update --init --recursive dotbot public
+        stdout: true
+        stderr: true
+    -
+        command: echo $(whoami)"@"$(hostname) | grep -Eiq "^ruben@rubens-pc" && git submodule update --init --recursive private
+        stdout: true
+        stderr: true
+
 - clean: ['~']
 
 - clean:
@@ -42,6 +52,3 @@
     ~/.zshrc:
         path: public/zsh/zshrc
         if: 'which zsh'
-
-- shell:
-    - [git submodule update --init --recursive, Installing submodules]
