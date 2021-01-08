@@ -44,6 +44,7 @@
     ~/.ssh/config.local:
         path: private/ssh/config.local
         if: 'echo $(whoami)"@"$(hostname) | grep -Eiq "^ruben@rubens-pc"'
+        force: true
     ~/.ssh/id_rsa.pub:
         path: private/ssh/id_rsa.pub
         if: 'echo `whoami`"@"`hostname` | grep -Eiq "^ruben@rubens-pc"'
