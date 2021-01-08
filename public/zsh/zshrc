@@ -1,0 +1,3 @@
+for f in "$HOME"/.shell/*.(zsh|sh) ; do
+  source "$f"
+done
