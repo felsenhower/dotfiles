@@ -5,3 +5,6 @@
 [submodule "private"]
 	path = private
 	url = git@github.com:felsenhower/dotfiles.private.git
+[submodule "public/ohmyzsh"]
+	path = public/ohmyzsh
+	url = https://github.com/felsenhower/ohmyzsh.git
