@@ -1,0 +1,47 @@
+- defaults:
+    link:
+        create: true
+
+- clean: ['~']
+
+- clean:
+    ~/.config:
+        recursive: true
+
+- create:
+    - ~/.ssh
+
+- shell:
+    -
+        command: touch ~/.ssh/config.local
+        stdout: true
+        stderr: true
+
+- link:
+    ~/.bashrc: public/bash/bashrc
+    ~/.bash_login: public/bash/bash_login
+    ~/.config/fontconfig: public/fontconfig
+    ~/.config/nvim: public/neovim
+    ~/.config/redshift.conf:
+        path: public/redshift/redshift.conf
+        if: 'which redshift'
+    ~/.config/redshift:
+        path: public/redshift/redshift
+        if: 'which redshift'
+    ~/.shelltools: public/shelltools
+    ~/.ssh/config: public/ssh/config
+    ~/.ssh/config.local:
+        path: private/ssh/config.local
+        if: 'echo $(whoami)"@"$(hostname) | grep -Eiq "^ruben@rubens-pc"'
+    ~/.ssh/id_rsa.pub:
+        path: private/ssh/id_rsa.pub
+        if: 'echo `whoami`"@"`hostname` | grep -Eiq "^ruben@rubens-pc"'
+    ~/.config/vlc/vlcrc:
+        path: public/vlc/vlcrc
+        if: 'which vlc'
+    ~/.zshrc:
+        path: public/zsh/zshrc
+        if: 'which zsh'
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
