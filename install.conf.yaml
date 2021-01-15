@@ -31,6 +31,9 @@
     ~/.bashrc: public/bash/bashrc
     ~/.bash_login: public/bash/bash_login
     ~/.config/fontconfig: public/fontconfig
+    ~/.auto-screen-off:
+        path: public/kscreenlocker-auto-screen-off
+        if: 'env | grep -q XDG_CURRENT_DESKTOP=KDE'
     ~/.config/nvim: public/neovim
     ~/.oh-my-zsh:
         path: public/ohmyzsh

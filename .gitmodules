@@ -8,3 +8,6 @@
 [submodule "public/ohmyzsh"]
 	path = public/ohmyzsh
 	url = https://github.com/felsenhower/ohmyzsh.git
+[submodule "public/kscreenlocker-auto-screen-off"]
+	path = public/kscreenlocker-auto-screen-off
+	url = https://github.com/felsenhower/kscreenlocker-auto-screen-off
