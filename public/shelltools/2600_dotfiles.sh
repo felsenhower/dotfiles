@@ -1,16 +1,18 @@
-DOTFILES_PATH="$HOME"'/.dotfiles'
+export DOTFILES_PATH="$HOME"'/.dotfiles'
 
 function dotfiles() {
-  (
+  if [ "$1" = "install" ] ; then
+    (
+      cd "$DOTFILES_PATH"
+      shift
+      ./install "$@"
+    )
+  elif [ "$@" = "cd" ] ; then
     cd "$DOTFILES_PATH"
-    case "$1" in
-      'install')
-        shift
-        ./install "$@"
-        ;;
-      *)
-        "$@"
-        ;;
-    esac
-  )
+  else
+    (
+      cd "$DOTFILES_PATH"
+      "$@"
+    )
+  fi
 }
