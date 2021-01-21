@@ -8,7 +8,7 @@
         stdout: true
         stderr: true
     -
-        command: echo $(whoami)"@"$(hostname) | grep -Eiq "^ruben@rubens-pc" && git submodule update --init --recursive private
+        command: echo $(whoami)"@"$(hostname) | grep -Eiq "^ruben@rubens-pc" && git submodule update --init --recursive private || true
         stdout: true
         stderr: true
 
@@ -34,7 +34,9 @@
     ~/.auto-screen-off:
         path: public/kscreenlocker-auto-screen-off
         if: 'env | grep -q XDG_CURRENT_DESKTOP=KDE'
-    ~/.config/nvim: public/neovim
+    ~/.config/nvim:
+        path: public/neovim
+        if: 'which nvim'
     ~/.oh-my-zsh:
         path: public/ohmyzsh
         force: true
