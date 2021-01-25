@@ -11,3 +11,6 @@
 [submodule "public/kscreenlocker-auto-screen-off"]
 	path = public/kscreenlocker-auto-screen-off
 	url = https://github.com/felsenhower/kscreenlocker-auto-screen-off
+[submodule "public/spack"]
+	path = public/spack
+	url = https://github.com/spack/spack

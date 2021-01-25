@@ -55,6 +55,7 @@
     ~/.ssh/id_rsa.pub:
         path: private/ssh/id_rsa.pub
         if: 'echo `whoami`"@"`hostname` | grep -Eiq "^ruben@rubens-pc"'
+    ~/.local/share/spack: public/spack
     ~/.config/vlc/vlcrc:
         path: public/vlc/vlcrc
         if: 'which vlc'
