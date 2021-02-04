@@ -15,5 +15,5 @@ fi
 
 if installed git ; then
   git config --global user.name 'Ruben Felgenhauer'
-  git config --global user.email '4felgenh@informatik.uni-hamburg.de'
+  git config --global user.email 'Ruben.Felgenhauer@uni-hamburg.de'
 fi
