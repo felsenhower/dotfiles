@@ -33,6 +33,8 @@
     ~/.bash_login: public/bash/bash_login
     ~/.local/bin/bullshit: public/bullshit/src/bullshit
     ~/.local/bin/bullshit_lib: public/bullshit/src/bullshit_lib
+    ~/.local/bin/diff-so-fancy: public/diff-so-fancy/diff-so-fancy
+    ~/.local/bin/diff-so-fancy.d: public/diff-so-fancy/diff-so-fancy.d
     ~/.config/fontconfig: public/fontconfig
     ~/.local/bin/full-width: public/full-width/full-width
     ~/.auto-screen-off:

@@ -23,3 +23,6 @@
 [submodule "public/bullshit"]
 	path = public/bullshit
 	url = https://github.com/felsenhower/bullshit-arch.git
+[submodule "public/diff-so-fancy/diff-so-fancy.d"]
+	path = public/diff-so-fancy/diff-so-fancy.d
+	url = https://github.com/so-fancy/diff-so-fancy.git
