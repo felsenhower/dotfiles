@@ -72,4 +72,11 @@
         command: '[ -f ~/.local/bin/full-width ] && chmod +x ~/.local/bin/full-width'
         stdout: true
         stderr: true
-  
+    -
+        command: 'echo -en "\033[1;33mGithub CLI is " ; which gh >/dev/null || echo -n "not " ; echo "installed"! ; true'
+        stdout: true
+        stderr: true
+    -
+        command: 'echo -en "\033[1;33mthefuck is " ; which fuck >/dev/null || echo -n "not " ; echo "installed"! ; true'
+        stdout: true
+        stderr: true
