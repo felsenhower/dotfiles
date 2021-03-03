@@ -20,10 +20,12 @@ export profile_identifier="$USER"'@'"$(hostname)"':'"$current_shell"
 
 # Declare an array of profile identifiers that map to specific colors
 declare -A prompt_color_overrides
-prompt_color_overrides["ruben@RUBENS-PC1:zsh"]="34"    # 39 = light blue
+prompt_color_overrides["ruben@RUBENS-PC1:zsh"]="34"         # 34 = light green
 prompt_color_overrides["ruben@RUBENS-PC2:zsh"]="34"         # 34 = light green
-prompt_color_overrides["ruben@RUBENS-PC1:bash"]="202"  # 202 = light red
+prompt_color_overrides["ruben@RUBENS-PC3:zsh"]="34"         # 34 = light green
+prompt_color_overrides["ruben@RUBENS-PC1:bash"]="202"       # 202 = light red
 prompt_color_overrides["ruben@RUBENS-PC2:bash"]="202"       # 202 = light red
+prompt_color_overrides["ruben@RUBENS-PC3:bash"]="202"       # 202 = light red
 
 # Get the color from the array. This may be empty if it wasn't specified above
 export prompt_color_bash="${prompt_color_overrides["$profile_identifier"]}"
