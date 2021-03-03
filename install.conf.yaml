@@ -13,6 +13,7 @@
 - create:
     - ~/.ssh
     - ~/.local/bin
+    - ~/.git-templates/hooks
 
 - shell:
     -
@@ -46,6 +47,7 @@
     ~/.oh-my-zsh:
         path: public/ohmyzsh
         force: true
+    ~/.git-templates/hooks/prepare-commit-msg: public/prepare-commit-msg/prepare-commit-msg
     ~/.config/redshift.conf:
         path: public/redshift/redshift.conf
         if: 'which redshift'
@@ -72,6 +74,10 @@
 - shell:
     -
         command: '[ -f ~/.local/bin/full-width ] && chmod +x ~/.local/bin/full-width'
+        stdout: true
+        stderr: true
+    -
+        command: '[ -f ~/.git-templates/hooks/prepare-commit-msg ] && chmod +x ~/.git-templates/hooks/prepare-commit-msg'
         stdout: true
         stderr: true
     -

@@ -26,3 +26,6 @@
 [submodule "public/diff-so-fancy/diff-so-fancy.d"]
 	path = public/diff-so-fancy/diff-so-fancy.d
 	url = https://github.com/so-fancy/diff-so-fancy.git
+[submodule "public/prepare-commit-msg"]
+	path = public/prepare-commit-msg
+	url = https://gist.github.com/10a91e5943668825dc965c995054ac14.git
