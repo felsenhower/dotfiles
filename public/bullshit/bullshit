@@ -1,0 +1,4 @@
+#!/bin/sh
+
+`dirname "$0"`'/bullshit.d/src/bin/bullshit'
+
