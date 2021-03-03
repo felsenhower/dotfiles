@@ -73,6 +73,10 @@
 
 - shell:
     -
+        command: 'cd public/pip && which pip3 >/dev/null && pip3 install --user -r requirements.txt ; true'
+        stdout: true
+        stderr: true
+    -
         command: '[ -f ~/.local/bin/full-width ] && chmod +x ~/.local/bin/full-width'
         stdout: true
         stderr: true
