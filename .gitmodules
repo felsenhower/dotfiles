@@ -20,3 +20,6 @@
 [submodule "public/full-width"]
 	path = public/full-width
 	url = https://gist.github.com/e103a0f6c2354b9d74afd9e6e60c16c5.git
+[submodule "public/bullshit"]
+	path = public/bullshit
+	url = https://github.com/felsenhower/bullshit-arch.git

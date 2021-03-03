@@ -31,6 +31,8 @@
 - link:
     ~/.bashrc: public/bash/bashrc
     ~/.bash_login: public/bash/bash_login
+    ~/.local/bin/bullshit: public/bullshit/src/bullshit
+    ~/.local/bin/bullshit_lib: public/bullshit/src/bullshit_lib
     ~/.config/fontconfig: public/fontconfig
     ~/.local/bin/full-width: public/full-width/full-width
     ~/.auto-screen-off:
