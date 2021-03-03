@@ -17,6 +17,8 @@ if installed git ; then
   git config --global user.name 'Ruben Felgenhauer'
   git config --global user.email 'Ruben.Felgenhauer@uni-hamburg.de'
   
+  git config --global init.templatedir '~/.git-templates'
+  
   git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
   git config --global interactive.diffFilter "diff-so-fancy --patch"
   
