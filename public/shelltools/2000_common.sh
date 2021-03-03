@@ -37,3 +37,8 @@ if installed git ; then
   git config --global color.diff.new        "green bold"
   git config --global color.diff.whitespace "red reverse"
 fi
+
+unalias diff
+function diff() {
+  /usr/bin/diff -u "$@" | diff-so-fancy
+}
