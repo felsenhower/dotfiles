@@ -2,20 +2,12 @@
     link:
         create: true
 
-- shell:
-    -
-        command: 'git submodule update --init --recursive dotbot public'
-        stdout: true
-        stderr: true
-    -
-        command: 'echo $(whoami)"@"$(hostname) | grep -Eiq "^ruben@rubens-pc" && git submodule update --init --recursive private || true'
-        stdout: true
-        stderr: true
-
-- clean: ['~']
-
 - clean:
-    ~/.config:
+    ~/:
+        recursive: false
+    ~/.config/:
+        recursive: true
+    ~/.ssh/:
         recursive: true
 
 - create:
@@ -23,6 +15,14 @@
     - ~/.local/bin
 
 - shell:
+    -
+        command: 'git submodule update --init --recursive dotbot public'
+        stdout: true
+        stderr: true
+    -
+        command: 'echo $(whoami)"@"$(hostname) | grep -Eiq "^ruben@rubens-pc" && git submodule update --init --recursive private ; true'
+        stdout: true
+        stderr: true
     -
         command: 'touch ~/.ssh/config.local'
         stdout: true
