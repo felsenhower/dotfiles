@@ -4,11 +4,11 @@
 
 - shell:
     -
-        command: git submodule update --init --recursive dotbot public
+        command: 'git submodule update --init --recursive dotbot public'
         stdout: true
         stderr: true
     -
-        command: echo $(whoami)"@"$(hostname) | grep -Eiq "^ruben@rubens-pc" && git submodule update --init --recursive private || true
+        command: 'echo $(whoami)"@"$(hostname) | grep -Eiq "^ruben@rubens-pc" && git submodule update --init --recursive private || true'
         stdout: true
         stderr: true
 
@@ -20,10 +20,11 @@
 
 - create:
     - ~/.ssh
+    - ~/.local/bin
 
 - shell:
     -
-        command: touch ~/.ssh/config.local
+        command: 'touch ~/.ssh/config.local'
         stdout: true
         stderr: true
 
@@ -31,6 +32,7 @@
     ~/.bashrc: public/bash/bashrc
     ~/.bash_login: public/bash/bash_login
     ~/.config/fontconfig: public/fontconfig
+    ~/.local/bin/full-width: public/full-width/full-width
     ~/.auto-screen-off:
         path: public/kscreenlocker-auto-screen-off
         if: 'env | grep -q XDG_CURRENT_DESKTOP=KDE'
@@ -62,3 +64,10 @@
     ~/.zshrc:
         path: public/zsh/zshrc
         if: 'which zsh'
+
+- shell:
+    -
+        command: '[ -f ~/.local/bin/full-width ] && chmod +x ~/.local/bin/full-width'
+        stdout: true
+        stderr: true
+  
