@@ -14,6 +14,7 @@
     - ~/.ssh
     - ~/.local/bin
     - ~/.git-templates/hooks
+    - ~/.vim
 
 - shell:
     -
@@ -44,6 +45,8 @@
     ~/.config/nvim:
         path: public/neovim
         if: 'which nvim'
+    ~/.vimrc: public/neovim/init.vim
+    ~/.vim/pack: public/neovim/pack
     ~/.oh-my-zsh:
         path: public/ohmyzsh
         force: true
