@@ -7,8 +7,9 @@ function dotfiles() {
       shift
       ./install "$@"
     )
-  elif [ "$@" = "cd" ] ; then
-    cd "$DOTFILES_PATH"
+  elif [ "$1" = "cd" ] ; then
+    shift
+    cd "$DOTFILES_PATH"/"$@"
   else
     (
       cd "$DOTFILES_PATH"
