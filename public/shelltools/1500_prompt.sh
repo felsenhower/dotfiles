@@ -33,7 +33,7 @@ export prompt_color_bash="${prompt_color_overrides["$profile_identifier"]}"
 # If the color string is empty, generate the color from a cheap checksum of the profile identifier
 if [ "$prompt_color_bash" = "" ] ; then
   # Setup an array with colors that look fine as a prompt color
-  set -a prompt_colors
+  declare -a prompt_colors
   prompt_colors_bash=( $(echo {1..6} {9..14} {26..32} {35..51} {70..87} {106..123} {126..129} {131..144} {146..159} {161..180} {183..187} {189..195} {198..229}) )
   # Generate the checksum and calculate the color integer via modulo with the number of allowed colors
   export prompt_color_bash="${prompt_colors_bash[$(( $(echo "$profile_identifier" | cksum | cut -d' ' -f1) % ${#prompt_colors_bash[@]} ))]}"
