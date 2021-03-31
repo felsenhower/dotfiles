@@ -3,6 +3,6 @@
 zshconfig() {
   config_file=~/.zshrc
   oldcontent=$(<"$config_file")
-  vim "$config_file"
-  echo $oldcontent | diff -sq .zshrc - 2>&1 >/dev/null || src
+  "$EDITOR" "$config_file"
+  echo $oldcontent | \diff -sq .zshrc - 2>&1 >/dev/null || src
 } 

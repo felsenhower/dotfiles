@@ -9,7 +9,7 @@ if installed nvim ; then
   alias vi="nvim"
   alias vimdiff='nvim -d'
   export EDITOR=nvim
-elif which vim >/dev/null ; then
+elif installed vim ; then
   export EDITOR=vim
 fi
 
@@ -40,7 +40,9 @@ if installed git ; then
   fi
 fi
 
-function fancydiff() {
-  diff -u "$@" | diff-so-fancy
-}
-alias diff=fancydiff
+if installed diff-so-fancy ; then
+  function fancydiff() {
+    diff -u "$@" | diff-so-fancy
+  }
+  alias diff=fancydiff
+fi
