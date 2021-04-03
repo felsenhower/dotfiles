@@ -1,4 +1,3 @@
 #!/bin/sh
 
-`dirname "$0"`'/diff-so-fancy.d/diff-so-fancy'
-
+`dirname "$0"`'/diff-so-fancy.d/diff-so-fancy' "$@"
