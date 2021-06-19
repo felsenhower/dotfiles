@@ -46,3 +46,6 @@ if installed diff-so-fancy ; then
   }
   alias diff=fancydiff
 fi
+
+alias nvidia-gputop="watch -n1 nvidia-smi"
+alias gputop="nvidia-gputop"
