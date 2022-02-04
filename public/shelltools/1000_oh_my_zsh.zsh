@@ -75,7 +75,7 @@ DISABLE_AUTO_UPDATE="true"
 # z                        https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/z
 # zsh-syntax-highlighting  https://github.com/zsh-users/zsh-syntax-highlighting
 # zsh-autosuggestions      https://github.com/zsh-users/zsh-autosuggestions
-plugins=( zsh_reload thefuck colorize z zsh-syntax-highlighting zsh-autosuggestions)
+plugins=( zsh_reload thefuck colorize zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
