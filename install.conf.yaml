@@ -38,6 +38,7 @@
     ~/.local/bin/diff-so-fancy: public/diff-so-fancy/diff-so-fancy
     ~/.local/bin/diff-so-fancy.d: public/diff-so-fancy/diff-so-fancy.d
     ~/.config/envman: public/envman
+    ~/.local/share/templates: public/file-templates/
     ~/.config/fontconfig: public/fontconfig
     ~/.local/bin/full-width: public/full-width/full-width
     ~/.fzf: public/fzf

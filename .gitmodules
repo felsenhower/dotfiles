@@ -32,3 +32,6 @@
 [submodule "public/fzf"]
 	path = public/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "public/file-templates"]
+	path = public/file-templates
+	url = https://github.com/felsenhower/file-templates.git
