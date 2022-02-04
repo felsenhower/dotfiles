@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+set -euo pipefail
+IFS=$'\n\t'
+
 case $1 in
     period-changed)
         exec notify-send -i redshift -a "Redshift" "Redshift" "Period changed to $3"
