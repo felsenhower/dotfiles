@@ -37,8 +37,10 @@
     ~/.local/bin/bullshit.d: public/bullshit/bullshit.d
     ~/.local/bin/diff-so-fancy: public/diff-so-fancy/diff-so-fancy
     ~/.local/bin/diff-so-fancy.d: public/diff-so-fancy/diff-so-fancy.d
+    ~/.config/envman: public/envman
     ~/.config/fontconfig: public/fontconfig
     ~/.local/bin/full-width: public/full-width/full-width
+    ~/.fzf: public/fzf
     ~/.auto-screen-off:
         path: public/kscreenlocker-auto-screen-off
         if: 'env | grep -q XDG_CURRENT_DESKTOP=KDE'

@@ -29,3 +29,6 @@
 [submodule "public/bullshit/bullshit.d"]
 	path = public/bullshit/bullshit.d
 	url = https://github.com/felsenhower/bullshit-arch.git
+[submodule "public/fzf"]
+	path = public/fzf
+	url = https://github.com/junegunn/fzf.git

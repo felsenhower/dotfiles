@@ -1,3 +1,9 @@
 for f in "$HOME"/.shelltools/*.(zsh|sh) ; do
   source "$f"
 done
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#eval "$(zoxide init zsh)"
+
+
