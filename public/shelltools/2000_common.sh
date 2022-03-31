@@ -13,31 +13,35 @@ elif installed vim ; then
   export EDITOR=vim
 fi
 
-if installed git ; then
-  git config --global user.name 'Ruben Felgenhauer'
-  git config --global user.email 'Ruben.Felgenhauer@uni-hamburg.de'
-  
-  git config --global init.templatedir '~/.git-templates'
-
-  if installed diff-so-fancy ; then  
-    git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-    git config --global interactive.diffFilter "diff-so-fancy --patch"
-    
-    git config --global color.ui true
-  
-    git config --global color.diff-highlight.oldNormal    "red bold"
-    git config --global color.diff-highlight.oldHighlight "red bold 52"
-    git config --global color.diff-highlight.newNormal    "green bold"
-    git config --global color.diff-highlight.newHighlight "green bold 22"
-  
-    git config --global color.diff.meta       "11"
-    git config --global color.diff.frag       "magenta bold"
-    git config --global color.diff.func       "146 bold"
-    git config --global color.diff.commit     "yellow bold"
-    git config --global color.diff.old        "red bold"
-    git config --global color.diff.new        "green bold"
-    git config --global color.diff.whitespace "red reverse"
+git_config() {
+  if [ "$(git config --global "$1")" != "$2" ] ; then
+    git config --global "$1" "$2"
   fi
+}
+
+if ! [ -f ~/.gitconfig.lock ] ; then
+    if installed git ; then
+        git_config init.templatedir '~/.git-templates'
+         if installed diff-so-fancy ; then  
+            git_config core.pager "diff-so-fancy | less --tabs=4 -RFX"
+            git_config interactive.diffFilter "diff-so-fancy --patch"
+            
+            git_config color.ui true
+        
+            git_config color.diff-highlight.oldNormal    "red bold"
+            git_config color.diff-highlight.oldHighlight "red bold 52"
+            git_config color.diff-highlight.newNormal    "green bold"
+            git_config color.diff-highlight.newHighlight "green bold 22"
+        
+            git_config color.diff.meta       "11"
+            git_config color.diff.frag       "magenta bold"
+            git_config color.diff.func       "146 bold"
+            git_config color.diff.commit     "yellow bold"
+            git_config color.diff.old        "red bold"
+            git_config color.diff.new        "green bold"
+            git_config color.diff.whitespace "red reverse"
+        fi
+    fi
 fi
 
 if installed diff-so-fancy ; then
