@@ -53,3 +53,5 @@ fi
 
 alias nvidia-gputop="watch -n1 nvidia-smi"
 alias gputop="nvidia-gputop"
+
+export SHELLCHECK='1'
